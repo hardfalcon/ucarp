@@ -251,7 +251,7 @@ static void carp_send_ad(struct carp_softc *sc)
     eh.ether_shost[1] = 0x00;
     eh.ether_shost[2] = 0x5e;
     eh.ether_shost[3] = 0x00;
-    eh.ether_shost[4] = 0x00;
+    eh.ether_shost[4] = 0x01;
     eh.ether_shost[5] = vhid;
     
     if (no_mcast) {
@@ -266,7 +266,7 @@ static void carp_send_ad(struct carp_softc *sc)
         eh.ether_dhost[1] = 0x00;
         eh.ether_dhost[2] = 0x5e;
         eh.ether_dhost[3] = 0x00;
-        eh.ether_dhost[4] = 0x00;
+        eh.ether_dhost[4] = 0x01;
         eh.ether_dhost[5] = 0x12;        
     }    
     eh.ether_type = htons(ETHERTYPE_IP);    
